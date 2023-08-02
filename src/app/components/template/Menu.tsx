@@ -30,7 +30,7 @@ export const Menu = () => {
               <LinkMenu name="6- Vowel Counter" href="/VowelCounter" />
             </li>
             <li>
-              <LinkMenu name="7-Grade Average" href="/" />
+              <LinkMenu name="7-Grade Average" href="/GradeAverage" />
             </li>
             <li>
               <LinkMenu name="8- Interest Calculation" href="/" />
