@@ -24,7 +24,7 @@ export const Menu = () => {
               <LinkMenu name="4- Palindrome" href="/Palindrome" />
             </li>
             <li>
-              <LinkMenu name="5- Table" href="/" />
+              <LinkMenu name="5- Table" href="/Table" />
             </li>
             <li>
               <LinkMenu name="6- Vowel Counter" href="/" />
