@@ -12,10 +12,8 @@ export const simpleCalculator = (data: SimpleCalculatorProps) => {
       return numberOne - numberTwo;
     case "*":
       return numberOne * numberTwo;
-    case "/":
+      default:
       return numberOne / numberTwo;
-
-    default:
-      return "Error: Invalid operator.";
+      
   }
 };
