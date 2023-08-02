@@ -8,14 +8,25 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-
-
 body {
+  display: grid;
+  grid-template-areas:
+    "menu-container content"
+    "footer footer";
+  grid-template-columns:240px auto;
+  grid-template-rows:auto 40px;
+
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--background-start-rgb);
+}
+footer {
+  grid-area: footer;
+}
+
+.menu-container {
+  grid-area: menu-container;
+}
+.content {
+  min-height:calc(100vh - 40px);
+  grid-area: content;
 }

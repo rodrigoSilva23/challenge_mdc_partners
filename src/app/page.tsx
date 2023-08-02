@@ -1,9 +1,8 @@
-import Image from 'next/image'
 
-export default function Home() {
+export default function SimpleCalculator() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-     
+    <main className="content p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+      asdas
     </main>
-  )
+  );
 }
