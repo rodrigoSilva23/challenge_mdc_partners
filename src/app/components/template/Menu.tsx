@@ -33,7 +33,7 @@ export const Menu = () => {
               <LinkMenu name="7-Grade Average" href="/GradeAverage" />
             </li>
             <li>
-              <LinkMenu name="8- Interest Calculation" href="/" />
+              <LinkMenu name="8- Interest Calculation" href="/InterestCalculation" />
             </li>
           </ul>
         </div>
