@@ -21,7 +21,7 @@ export const Menu = () => {
               <LinkMenu name="3- Factorial" href="/Factorial" />
             </li>
             <li>
-              <LinkMenu name="4- Palindrome" href="/" />
+              <LinkMenu name="4- Palindrome" href="/Palindrome" />
             </li>
             <li>
               <LinkMenu name="5- Table" href="/" />
