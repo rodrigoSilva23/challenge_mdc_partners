@@ -1,34 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Intenção de Compra!
 
-## Getting Started
+Este projeto consiste em dois serviços para gerenciar as intenções de compra.
 
-First, run the development server:
+## Funcionalidades
+
+- Busca de Produtos
+- Busca de Intenção de Compra
+- Criação de Intenção de Compra
+
+## Tecnologias Utilizadas
+
+- docker
+- docker-compose
+- PHP com Laravel
+- TypeScript com NestJS
+
+## Pré-requisitos
+
+Antes de iniciar a instalação do projeto, certifique-se de ter os seguintes requisitos instalados em sua máquina:
+
+- Docker: [Como instalar o Docker](https://www.docker.com/get-started/)
+- Docker Compose
+
+Verifique se todas as dependências necessárias estão instaladas antes de prosseguir com os seguintes passos.
+
+## Passo 1: Clonar o repositório
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone https://github.com/rodrigoSilva23/mono-challenge-intention.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Passo 2: Instalação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+    docker-compose up
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Aguarde subir os containers depois rode os seguintes comandos para instalar as dependências do laravel
 
-## Learn More
+```bash
+    docker-compose run service-products cp ./.env.example ./.env
+    docker-compose run service-products composer install  
+    docker-compose run service-products  php artisan key:generate
+```
 
-To learn more about Next.js, take a look at the following resources:
+## rotas 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+é possível ter acesso a todos os endpoints de intenção de serviço através das rotas do serviço de produtos, as rotas de produtos esta na raiz do projeto basta importa no insomnia
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+rotas de intenção de serviço através do serviço de produtos
+- http://localhost:8989/api/intention  <br>
 
-## Deploy on Vercel
+- rota de pages com pesquisa <br>
+<img src="./service-intention/img/get-search.png" ></img>
+- exemplo: http://localhost:8989/api/intention/pages?page=1&size=1&sort=name&order=desc&search=ana
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+exemplo rota de produtos ou `product/1`
+- http://localhost:8989/api/product
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### rota opcional para serviço de intenção
+Você pode verificar as rotas de serviços de intenção disponíveis acessando [http://localhost:3000/api/v1/endpoint](http://localhost:3000/api/v1/endpoint). Isso fornecerá uma visão geral de todos os endpoints disponíveis em sua API.
+
+<p>
+  Explore as rotas listadas para entender os diferentes endpoints e recursos que sua API oferece. Cada rota terá sua descrição e os métodos HTTP suportados, como GET, POST, PUT, DELETE, entre outros.
+</p>
+
+## possíveis erros
+
+Existe a chance de ocorrer um erro de permissão ao executar o comando docker-compose up. Para corrigir isso, você pode fornecer permissões de execução aos scripts de produto e intenção.
+
+Para conceder permissões de execução ao arquivo entrypoint.sh, você pode executar o seguinte comando no terminal:
+
+```bash
+   chmod +x ./service-intention/.docker/entrypoint.sh
+
+```
+isso ira da permissão  de execução do script
+
+## Author
+
+- [@rodrigosilvaDev23](https://github.com/rodrigoSilva23)
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](https://opensource.org/licenses/MIT) para obter mais informações.
