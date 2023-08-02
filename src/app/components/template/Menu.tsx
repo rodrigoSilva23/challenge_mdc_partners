@@ -18,7 +18,7 @@ export const Menu = () => {
               <LinkMenu name="2- Prime Numbers" href="/PrimeNumbers" />
             </li>
             <li>
-              <LinkMenu name="3- Factorial" href="/" />
+              <LinkMenu name="3- Factorial" href="/Factorial" />
             </li>
             <li>
               <LinkMenu name="4- Palindrome" href="/" />
