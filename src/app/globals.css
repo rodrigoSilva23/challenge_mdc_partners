@@ -13,8 +13,8 @@ body {
   grid-template-areas:
     "menu-container content"
     "footer footer";
-  grid-template-columns:240px auto;
-  grid-template-rows:auto 40px;
+  grid-template-columns: 240px auto;
+  grid-template-rows: auto 40px;
 
   color: rgb(var(--foreground-rgb));
   background: var(--background-start-rgb);
@@ -27,6 +27,16 @@ footer {
   grid-area: menu-container;
 }
 .content {
-  min-height:calc(100vh - 40px);
+  min-height: calc(100vh - 40px);
   grid-area: content;
+}
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "menu-container"
+      "content"
+      "footer";
+      grid-template-columns: auto;
+  grid-template-rows:100px auto 40px;
+  }
 }

@@ -3,14 +3,15 @@ import { LinkMenu } from "../LinkMenu";
 export const Menu = () => {
   return (
     <div className="menu-container">
+      
       <aside className="h-full">
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-          <div className="flex items-center pl-2.5 mb-5">
+        <div className="h-full px-3 py-4 overflow-y-auto  bg-gray-50 dark:bg-gray-800">
+          <div>
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               challenges
             </span>
           </div>
-          <ul className="space-y-2 font-medium">
+          <ul className="font-medium flex  md:flex-col flex-wrap">
             <li>
               <LinkMenu name=" 1- simple calculator" href="/" />
             </li>
@@ -33,7 +34,10 @@ export const Menu = () => {
               <LinkMenu name="7-Grade Average" href="/GradeAverage" />
             </li>
             <li>
-              <LinkMenu name="8- Interest Calculation" href="/InterestCalculation" />
+              <LinkMenu
+                name="8- Interest Calculation"
+                href="/InterestCalculation"
+              />
             </li>
           </ul>
         </div>
