@@ -30,7 +30,7 @@ Make sure all required dependencies are installed before proceeding with the fol
 ## Step 1: Clone the repository
 
 ```bash
-  git clone https://github.com/rodrigoSilva23/mono-challenge-intention.git
+https://github.com/rodrigoSilva23/challenge_mdc_partners.git
 ```
 
 ## Step 2: Installation
